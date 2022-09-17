@@ -38,5 +38,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Some Steps to follow
 
 1. Create Next App
+
    1. npx create-next-app
    2. add @mui library
+
+2. Create Website Layout
+   1. Create Header
+   2. Create Main
+   3. Create Footer
