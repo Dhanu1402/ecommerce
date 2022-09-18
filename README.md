@@ -43,6 +43,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
    2. add @mui library
 
 2. Create Website Layout
+
    1. Create Header
    2. Create Main
    3. Create Footer
+
+3. Connect to Sanity.io
+   1. install sanity
+   2. initialize sanity
+   3. create product model
+   4. insert sample data to produt model
