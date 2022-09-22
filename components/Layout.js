@@ -73,7 +73,7 @@ export default function Layout({ title, description, children }) {
           {children}
         </Container>
         <Box component="footer" sx={classes.footer}>
-          <Typography>ALl rights reserved. Kesharwani Store.</Typography>
+          <Typography>All rights reserved. Kesharwani Store.</Typography>
         </Box>
       </ThemeProvider>
     </>

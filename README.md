@@ -56,6 +56,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
    4. insert sample data to produt model
 
 4. List Products
+
    1. add localhost:3000 to the CORS origins in sanity
    2. fetch products from sanity
    3. render them in the screen
+
+5. Create Product Details Screen
+   1. add [slug].js to product folder
+   2. create component
+   3. get slug from url
+   4. fetch product from sanity client
+   5. render product image, info
+   6. show add to cart button
