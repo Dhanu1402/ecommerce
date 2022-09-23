@@ -71,6 +71,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
    6. show add to cart button
 
 6. Create Dark and Light Mode
+
    1. define Context, Store and reducer
    2. set darkMode flag
    3. use it on layout
+
+7. Implement Add to Cart
+   1. define cart in context
+   2. dispatch add to cart action
+   3. set click event handler for button
+   4. show cart items in the header menu
