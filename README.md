@@ -77,7 +77,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
    3. use it on layout
 
 7. Implement Add to Cart
+
    1. define cart in context
    2. dispatch add to cart action
    3. set click event handler for button
    4. show cart items in the header menu
+
+8. Create Cart Screen
+   1. get cart items from context
+   2. render in the screen
+   3. show cart items in the header menu
+   4. implement add to cart in home page

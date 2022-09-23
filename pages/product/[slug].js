@@ -21,8 +21,11 @@ import client from '../../utility/client';
 import { urlFor, urlForThumbnail } from '../../utility/image';
 import axios from 'axios';
 import { Store } from '../../utility/Store';
+import { useRouter } from 'next/router';
 
 export default function ProductScreen(props) {
+  const router = useRouter();
+
   const { slug } = props;
 
   const {
@@ -77,6 +80,7 @@ export default function ProductScreen(props) {
     enqueueSnackbar(`${product.name} added to the cart`, {
       variant: 'success',
     });
+    router.push('/cart');
   };
 
   return (
