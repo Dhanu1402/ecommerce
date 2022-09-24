@@ -98,5 +98,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
    4. implement add to cart in home page
 
 10. Create Login and Register Screen
+
     1. create login form
     2. create register for
+
+11. Implement User Register API
+    1. create user model
+    2. create user create route api
+    3. use it in the register screen
