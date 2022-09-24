@@ -84,7 +84,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
    4. show cart items in the header menu
 
 8. Create Cart Screen
+
    1. get cart items from context
    2. render in the screen
    3. show cart items in the header menu
    4. implement add to cart in home page
+
+9. Create Header Menu
+
+   1. add cart link to header
+   2. show cart itm=ems badge in header
+   3. add login link to header
+   4. implement add to cart in home page
+
+10. Create Login and Register Screen
+    1. create login form
+    2. create register for
