@@ -115,7 +115,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     3. implement logout
 
 13. Create Shipping Screen
+
     1. create shipping component
     2. get address fields
     3. implement submit handler
     4. handle redirect
+
+14. Create Payment Screen
+    1. create payment component
+    2. get payment fields
+    3. implement submit handler

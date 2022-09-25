@@ -89,6 +89,7 @@ export default function Layout({ title, description, children }) {
     jsCookie.remove('userInfo');
     jsCookie.remove('cartItems');
     jsCookie.remove('shippingAddress');
+    jsCookie.remove('paymentMethod');
     router.push('/');
   };
 
@@ -155,7 +156,7 @@ export default function Layout({ title, description, children }) {
                     >
                       Profile
                     </MenuItem>
-                    <MenuItem onClick={logoutHandler}>Logout</MenuItem>
+                    <MenuItem onClick={logoutClickHandler}>Logout</MenuItem>
                   </Menu>
                 </>
               ) : (
