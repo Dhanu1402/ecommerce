@@ -17,6 +17,7 @@ import { useSnackbar } from 'notistack';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
+import { getError } from '../utility/error';
 
 export default function RegisterScreen() {
   const { state, dispatch } = useContext(Store);
@@ -56,7 +57,7 @@ export default function RegisterScreen() {
       jsCookie.set('userInfo', JSON.stringify(data));
       router.push('/');
     } catch (err) {
-      enqueueSnackbar(err.message, {
+      enqueueSnackbar(getError(err), {
         variant: 'error',
       });
     }
