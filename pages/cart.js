@@ -20,12 +20,15 @@ import axios from 'axios';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import NextLink from 'next/link';
+import { useRouter } from 'next/router';
 import { useSnackbar } from 'notistack';
 import { useContext } from 'react';
 import Layout from '../components/Layout';
 import { Store } from '../utility/Store';
 
 function CartScreen() {
+  const router = useRouter();
+
   const {
     state: {
       cart: { cartItems },
@@ -155,7 +158,14 @@ function CartScreen() {
                   </Typography>
                 </ListItem>
                 <ListItem>
-                  <Button variant="contained" color="primary" fullWidth>
+                  <Button
+                    onClick={() => {
+                      router.push('/shipping');
+                    }}
+                    variant="contained"
+                    color="primary"
+                    fullWidth
+                  >
                     Checkout
                   </Button>
                 </ListItem>

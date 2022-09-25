@@ -16,6 +16,7 @@ import jsCookie from 'js-cookie';
 import { useSnackbar } from 'notistack';
 import { Store } from '../utility/Store';
 import { useRouter } from 'next/router';
+import { getError } from '../utility/error';
 
 export default function LoginScreen() {
   const { state, dispatch } = useContext(Store);
@@ -24,11 +25,13 @@ export default function LoginScreen() {
 
   const router = useRouter();
 
+  const { redirect } = router.query;
+
   useEffect(() => {
     if (userInfo) {
-      Router.push('/');
+      Router.push(redirect || '/');
     }
-  }, [router, userInfo]);
+  }, [router, userInfo, redirect]);
 
   const {
     handleSubmit,
@@ -46,7 +49,7 @@ export default function LoginScreen() {
       });
       dispatch({ type: 'USER_LOGIN', payload: data });
       jsCookie.set('userInfo', JSON.stringify(data));
-      router.push('/');
+      router.push(redirect || '/');
     } catch (err) {
       enqueueSnackbar(getError(err), { variant: 'error' });
     }
@@ -124,7 +127,7 @@ export default function LoginScreen() {
           </ListItem>
           <ListItem>
             Not having an account?{' '}
-            <NextLink href={`/register`} passHref>
+            <NextLink href={`/register?redirect=${redirect || '/'}`} passHref>
               <Link>Register</Link>
             </NextLink>
           </ListItem>

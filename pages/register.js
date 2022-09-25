@@ -26,11 +26,13 @@ export default function RegisterScreen() {
 
   const router = useRouter();
 
+  const { redirect } = router.query;
+
   useEffect(() => {
     if (userInfo) {
-      Router.push('/');
+      Router.push(redirect || '/');
     }
-  }, [router, userInfo]);
+  }, [router, userInfo, redirect]);
 
   const {
     handleSubmit,
@@ -55,7 +57,7 @@ export default function RegisterScreen() {
       });
       dispatch({ type: 'USER_LOGIN', payload: data });
       jsCookie.set('userInfo', JSON.stringify(data));
-      router.push('/');
+      router.push(redirect || '/');
     } catch (err) {
       enqueueSnackbar(getError(err), {
         variant: 'error',
@@ -193,7 +195,7 @@ export default function RegisterScreen() {
           </ListItem>
           <ListItem>
             Already have an account?{' '}
-            <NextLink href={`/login`} passHref>
+            <NextLink href={`/login?redirect=${redirect || '/'}`} passHref>
               <Link>Login</Link>
             </NextLink>
           </ListItem>
