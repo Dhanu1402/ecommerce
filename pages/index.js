@@ -1,4 +1,4 @@
-import { Alert, CircularProgress, Grid, Typography } from '@mui/material';
+import { Alert, CircularProgress, Grid } from '@mui/material';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useSnackbar } from 'notistack';
@@ -14,17 +14,13 @@ export default function Home() {
     state: { cart },
     dispatch,
   } = useContext(Store);
-
   const router = useRouter();
-
   const { enqueueSnackbar } = useSnackbar();
-
   const [state, setState] = useState({
     products: [],
     error: '',
     loading: true,
   });
-
   const { loading, error, products } = state;
 
   useEffect(() => {
@@ -70,7 +66,7 @@ export default function Home() {
       {loading ? (
         <CircularProgress />
       ) : error ? (
-        <Alert varient="danger">{error}</Alert>
+        <Alert variant="danger">{error}</Alert>
       ) : (
         <Grid container spacing={3}>
           {products.map((product) => (

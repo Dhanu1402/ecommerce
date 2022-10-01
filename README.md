@@ -122,6 +122,13 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
     4. handle redirect
 
 14. Create Payment Screen
+
     1. create payment component
     2. get payment fields
     3. implement submit handler
+
+15. Create Place Order Screen
+    1. create place order component
+    2. preview order
+    3. create order model in sanity
+    4. create order on place order click handler
